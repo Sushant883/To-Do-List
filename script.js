@@ -16,7 +16,8 @@ function addTask() {
         span.innerHTML = "\u00d7"// create the X sign
         li.appendChild(span);// display the X sign
     }
-    inputBox.value = "";
+    inputBox.value = "";// clear the input box after add the list item in the LI.
+    saveData()// save the data when refres the page.
 }
 
 listContainer.addEventListener("click", function(e) {
@@ -27,3 +28,7 @@ listContainer.addEventListener("click", function(e) {
         e.target.parentElement.remove();
     }
 }, false);
+
+function saveData(){
+    localStorage.setItem("data", listContainer.innerHTML);// save the data when brower is refresh
+}
