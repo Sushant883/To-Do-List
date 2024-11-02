@@ -36,5 +36,6 @@ function saveData(){
 }
 
 function showTask(){
-    listContainer.innerHTML = localStorage.getItem("data");
+    listContainer.innerHTML = localStorage.getItem("data");// load the same data whenever open the browser.
 }
+showTask();// call the function
